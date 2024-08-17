@@ -618,8 +618,8 @@ $('.owl-solution').owlCarousel({
     responsiveClass: true,
     dots: false,
     //    maxwidth: 230,
-    slideBy: 2,
-    center: true,
+    slideBy: 1,
+    center: false,
     responsive: {
         0: {
             items: 2,
@@ -637,7 +637,7 @@ $('.owl-solution').owlCarousel({
             nav: false
         },
         1300: {
-            items: 2,
+            items: 3,
             dots: false,
             nav: true
         }
@@ -859,3 +859,38 @@ $('.owl-tab').owlCarousel({
 
 
 // teaching-solution
+
+$('.owl-image').owlCarousel({
+    loop: false,
+    margin: 10,
+    autoplay: true,
+    nav: true,
+    navText: ["<img class='nextprevban-left' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzAQMAAAAAb6JpAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAA5JREFUeNpjYBgFgxEAAAGYAAGU8d2ZAAAAAElFTkSuQmCC'>", "<img class='nextprevban-right' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzAQMAAAAAb6JpAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAA5JREFUeNpjYBgFgxEAAAGYAAGU8d2ZAAAAAElFTkSuQmCC'>"],
+    responsiveClass: true,
+    dots: false,
+    //    maxwidth: 230,
+    slideBy: 1,
+    center: false,
+    responsive: {
+        0: {
+            items: 1,
+            dots: true,
+            nav: false
+        },
+        600: {
+            items: 1,
+            dots: true,
+            nav: false
+        },
+        1000: {
+            items: 2,
+            dots: true,
+            nav: false
+        },
+        1300: {
+            items: 1,
+            dots: false,
+            nav: true
+        }
+    }
+});

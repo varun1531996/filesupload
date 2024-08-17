@@ -193,7 +193,7 @@ width: auto !important;
                                            
                                             <div class="col-md-12">
                                                 <a href="javascript:void(0);" class="" style="cursor: default;">
-                                                    <img src="http://127.0.0.1:8000/uploads/images/57a6874c7c0fb03d0413a091b5513f43.jpg" alt="{{ $card->title }}"
+                                                    <img src="{{ $card->custom_thumbnail }}" alt="{{ $card->title }}"
                                                         class="img-responsive">
                                                 </a>
                                             </div>
