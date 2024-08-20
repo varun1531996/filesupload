@@ -53,24 +53,24 @@ stem and education, stem for kids, stem program, stem learning, lecture capture,
     </div>
 </div>
 
+@if(count($aboutUs) > 0)
 <div class="about-page-why-bg">
     <div class="container">
-
         <div class="row">
             <div class="col-md-12">
                 <h1 class="about-page-why-heading text-center">why <span class="number font-change">edutech?</span></h1>
             </div>
         </div>
-    
             <div class="row about-space-btwn">
                 <div class="owl-solution owl-carousel owl-theme"> 
+                    @foreach($aboutUs as $val)
                     <div class="col-md-12">
-                        <img src="tools/img/why/pioneers.png" alt="" class="img-responsive img-mid">
-                        <h3 class="about-why-subhead text-center">EdTech Pioneers</h3>
-                        <p class="about-why-desc">Since 1991, we continue to believe in the power of technology to transform the
-                            education process and the power of education to build innovative future generations.</p>
+                        <img src="{{$val->img_url}}" alt="" class="img-responsive img-mid">
+                        <h3 class="about-why-subhead text-center">{{$val->name}}</h3>
+                        <p class="about-why-desc">{!! $val->description !!}</p>
                     </div>
-                    <div class="col-md-12">
+                    @endforeach
+                    {{-- <div class="col-md-12">
                         <img src="tools/img/why/lifelong.png" alt="" class="img-responsive img-mid">
                         <h3 class="about-why-subhead text-center">Lifelong Learning</h3>
                         <p class="about-why-desc">We believe in lifelong learning and hence provide learning solutions across
@@ -93,11 +93,12 @@ stem and education, stem for kids, stem program, stem learning, lecture capture,
                         <h3 class="about-why-subhead text-center">Future Forward</h3>
                         <p class="about-why-desc">We continuously think future forward and strive to provide solutions that
                             empower youth and nations to be productive and prosperous in the Fourth Industrial era.</p>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
     </div>
 </div>
+@endif
 
 <div class="container-fluid about-page-solution-bg">
     <div class="container">
