@@ -5,13 +5,12 @@
 @endsection
 
 @section('contentheader_title')
-    <span class="header-title">Edit partner</span>
+    <span class="header-title">Add partner</span>
     <a href="{{ route('admin-partners') }}" class="btn btn-default btn-xs">Partners List</a>
-    <a href="{{ route('admin-partners-create') }}" class="btn btn-default btn-xs">Add Partners</a>
 @endsection
 
 @section('contentheader_action')
-    <button class="btn btn-sm btn-primary admin-submit"><i class="fa fa-save"></i> Update</button>
+    <button class="btn btn-sm btn-primary admin-submit"><i class="fa fa-save"></i> Save</button>
 @endsection
 
 
@@ -20,7 +19,7 @@
         <div class="col-md-12">
 
             <div class="box box-solid">
-                <form role="form" action="{{ route('admin-partners-update', ['id' => $partners->id]) }}" id="" class="admin-form" method="post"
+                <form role="form" action="{{ route('admin-partners-store') }}" id="" class="admin-form" method="post"
                       enctype="multipart/form-data">
                     <div class="box-body">
 
@@ -29,9 +28,9 @@
                         <div class="form-group">
                             <label for="status">Select category</label>
                             <select class="form-control select2" name="category" id="category">
-                                <option value="STEM Education" <?= 'STEM Education' == $partners->category ? 'selected' : '' ?> >STEM Education</option>
-                                <option value="Engineering Labs" <?= 'Engineering Labs' == $partners->category ? 'selected' : '' ?> >Engineering Labs</option>
-                                <option value="EdTech Solutions" <?= 'EdTech Solutions' == $partners->category ? 'selected' : '' ?> >EdTech Solutions</option>
+                                <option selected="selected" value="STEM Education">STEM Education</option>
+                                <option value="Engineering Labs">Engineering Labs</option>
+                                <option value="EdTech Solutions">EdTech Solutions</option>
                             </select>
                         </div>
 
@@ -40,15 +39,10 @@
                             <input type="file" class="form-control" name="partner_logo" id="partner_logo">
                         </div>
                         <div class="form-group">
-                            <a href="{{ $partners->logo }}" class="cms-img">
-                                <img src="{{ $partners->logo }}" alt="" style="width: 100px;">
-                            </a>
-                        </div>
-                        <div class="form-group">
                             <label for="status">Status</label>
                             <select class="form-control select2" name="status" id="status">
-                                <option value="1" <?= '1' == $partners->status ? 'selected' : '' ?> >ENABLE</option>
-                                <option value="0" <?= '0' == $partners->status ? 'selected' : '' ?> >DISABLE</option>
+                                <option selected="selected" value="1">ENABLE</option>
+                                <option value="0">DISABLE</option>
                             </select>
                         </div>
                     </div>
