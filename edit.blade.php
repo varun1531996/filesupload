@@ -114,7 +114,7 @@
 
                         <div class="form-group">
                             <label for="custom_thumbnail">Custom Thumbnail [705x346]</label>
-                            <input type="file" class="form-control" name="custom_thumbnail[]" id="custom_thumbnail">
+                            <input type="file" class="form-control" name="custom_thumbnail[]" id="custom_thumbnail" multiple>
                         </div>
 
                         <div class="form-group">
